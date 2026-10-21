@@ -1,0 +1,14 @@
+Oct 23 01:00:05 ip-10-0-1-5 sshd[1001]: Accepted password for alice from 10.0.0.15 port 51000 ssh2
+Oct 23 01:15:40 ip-10-0-1-5 sshd[1012]: Accepted password for alice from 10.0.0.15 port 51010 ssh2
+Oct 23 02:14:01 ip-10-0-1-5 sshd[2380]: Failed password for invalid user admin from 203.0.113.7 port 51820 ssh2
+Oct 23 02:14:11 ip-10-0-1-5 sshd[2381]: Failed password for invalid user root from 203.0.113.7 port 51821 ssh2
+Oct 23 02:14:22 ip-10-0-1-5 sshd[2382]: Failed password for invalid user test from 203.0.113.7 port 51822 ssh2
+Oct 23 02:14:33 ip-10-0-1-5 sshd[2383]: Failed password for invalid user ubuntu from 203.0.113.7 port 51823 ssh2
+Oct 23 02:14:44 ip-10-0-1-5 sshd[2384]: Failed password for invalid user admin from 203.0.113.7 port 51824 ssh2
+Oct 23 02:14:55 ip-10-0-1-5 sshd[2385]: Failed password for invalid user guest from 203.0.113.7 port 51825 ssh2
+Oct 23 03:00:00 ip-10-0-1-5 sshd[3001]: Accepted password for bob from 198.51.100.44 port 52000 ssh2
+Oct 23 03:02:30 ip-10-0-1-5 sudo:    bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/bin/bash
+Oct 23 04:00:00 ip-10-0-1-5 sshd[4001]: Accepted password for carol from 1.2.3.4 port 53000 ssh2
+Oct 23 04:20:00 ip-10-0-1-5 sshd[4002]: Accepted password for carol from 9.9.9.9 port 53010 ssh2
+Oct 23 05:30:00 ip-10-0-1-5 sshd[5001]: Accepted password for dave from 10.0.0.22 port 54000 ssh2
+Oct 23 05:45:12 ip-10-0-1-5 sshd[5010]: Failed password for dave from 203.0.113.50 port 54010 ssh2
