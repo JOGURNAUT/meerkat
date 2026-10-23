@@ -13,6 +13,10 @@ from datetime import timedelta
 from app.geoip import country_for_ip
 from app.models import EventType, Finding, LogEvent, Severity
 
+# CIS Control 4.5 / common SSH fail2ban defaults treat 5 failed attempts
+# as the point past which a login burst stops looking like a fat-fingered
+# password and starts looking like a scripted guesser; 5-in-5-minutes
+# mirrors fail2ban's own default (maxretry=5, findtime=10m), just tighter.
 BRUTE_FORCE_THRESHOLD = 5
 BRUTE_FORCE_WINDOW = timedelta(minutes=5)
 IMPOSSIBLE_TRAVEL_WINDOW = timedelta(minutes=60)
