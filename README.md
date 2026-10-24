@@ -116,7 +116,17 @@ flowchart LR
     F --> H
 
     H --> I["cli.py\nJSON report, exit 1 if any findings"]
+
+    classDef io fill:#dbeafe,stroke:#2563eb,color:#1e3a8a
+    classDef deterministic fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef output fill:#fef3c7,stroke:#d97706,color:#78350f
+
+    class A,B,C,G io
+    class D,E,F deterministic
+    class H,I output
 ```
+
+**Legend:** blue = parsing/lookup &nbsp;·&nbsp; green = deterministic detection rule (no LLM) &nbsp;·&nbsp; orange = output
 
 ```
 app/
