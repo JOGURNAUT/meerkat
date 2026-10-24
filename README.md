@@ -5,10 +5,7 @@
 A log-based intrusion detection pipeline: feed it an sshd/sudo auth log,
 it detects brute-force logins, impossible-travel logins, and privilege
 escalation from a previously-unseen source, and reports each one with
-the exact evidence lines that justify it. Named after the animal that
-stands sentinel and watches for threats — same naming convention as
-the rest of this portfolio ([Mongoose](https://github.com/JOGURNAUT/mongoose),
-[Woodpecker](https://github.com/JOGURNAUT/woodpecker)).
+the exact evidence lines that justify it.
 
 ## Why it's built this way
 
