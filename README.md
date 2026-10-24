@@ -100,6 +100,24 @@ run against the synthetic sample, and a run against the real log above.
 
 ## Architecture
 
+```mermaid
+flowchart LR
+    A["auth.log\n(sshd / sudo syslog)"] --> B["ingest.parse_log\nregex parser"]
+    B --> C["LogEvent list\n(chronological)"]
+
+    C --> D["detect_brute_force\n>=5 failed logins,\nsame IP, 5-min window"]
+    C --> E["detect_impossible_travel\n2 logins, different\ncountries, <60 min apart"]
+    C --> F["detect_privilege_escalation\nsudo-to-root after a\nlogin from a new source IP"]
+
+    E -.country lookup.-> G["geoip.country_for_ip\nmock by default,\nlive via MEERKAT_LIVE_GEOIP=1"]
+
+    D --> H["Finding list\n(rule, severity, reasons, evidence)"]
+    E --> H
+    F --> H
+
+    H --> I["cli.py\nJSON report, exit 1 if any findings"]
+```
+
 ```
 app/
   ingest.py   regex parser: sshd/sudo syslog lines -> LogEvent
